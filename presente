@@ -73,13 +73,10 @@ button:hover, .botao:hover {
     <div id="tela3" class="hidden">
         <h1>Minha mensagem pra você ❤️</h1>
         <div class="mensagem">
-            Desde que você entrou na minha vida,<br><br>
-            tudo ficou mais bonito, mais leve e mais verdadeiro.<br><br>
-            Em um mundo tão grande,<br>
-            foi em você que eu encontrei o meu lugar.<br><br>
-            E, desde então,<br>
-            tudo faz mais sentido.<br><br>
-            Você é a melhor parte dos meus dias 💖
+            Desde o nosso primeiro beijo,<br><br>
+            tudo ficou bem melhor. Os dias são leves com você do lado.<br><br>
+            Foi sorte minha te encontrar. Ou então era o nosso destino.<br>
+            foi em você que eu encontrei o meu lugar💖.<br><br>
         </div>
         <button onclick="proxima(4)">Agora veja a surpresa 🎬</button>
     </div>
@@ -89,8 +86,8 @@ button:hover, .botao:hover {
         <h1>Esse momento é pra você ❤️</h1>
         <p>Clique abaixo...</p>
 
-        <!-- 🔥 COLE SEU LINK DO GOOGLE DRIVE AQUI -->
-        <a class="botao" href="COLE_AQUI_SEU_LINK_DO_GOOGLE_DRIVE" target="_blank">
+        <!-- 🔥 https://drive.google.com/file/d/1C1Xbze-pe9SvmpM8bc3B5UlVWqGiUcYZ/view?usp=sharing -->
+        <a class="botao" href="https://drive.google.com/file/d/1C1Xbze-pe9SvmpM8bc3B5UlVWqGiUcYZ/view?usp=sharing" target="_blank">
             Assistir ao vídeo 🎵
         </a>
 
