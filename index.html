@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para você ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    button, a.botao {
+      display: inline-block;
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #ff4d6d;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover, a.botao:hover {
+      background: #e63e5c;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .mensagem {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- TELA 1 -->
+  <div id="tela1">
+    <h1>Tenho algo pra você ❤️</h1>
+    <p>Mas só continua se for com carinho...</p>
+    <button onclick="proxima(2)">Estou pronta 💌</button>
+  </div>
+
+  <!-- TELA 2 -->
+  <div id="tela2" class="hidden">
+    <h1>Escolha com o coração...</h1>
+    <button onclick="proxima(3)">Ler mensagem 💖</button>
+    <button onclick="proxima(4)">Ver surpresa 🎵</button>
+  </div>
+
+  <!-- TELA 3 -->
+  <div id="tela3" class="hidden">
+    <h1>Minha mensagem pra você ❤️</h1>
+    <div class="mensagem">
+      Desde o nosso primeiro beijo,<br><br>
+      tudo ficou melhor. Com você, tudo é mais leve!<br><br>
+      Foi sorte minha te encontrar,<br>
+      e ficar tem sido a minha melhor decisão.<br><br>
+      Quem sabe isso seja obra do destino💖.<br>
+    </div>
+    <button onclick="proxima(4)">Agora veja a surpresa 🎬</button>
+  </div>
+
+  <!-- TELA 4 -->
+  <div id="tela4" class="hidden">
+    <h1>Esse momento é pra você ❤️</h1>
+    <p>Clique abaixo...</p>
+
+    <!-- 🔥 COLE SEU LINK DO GOOGLE DRIVE AQUI -->
+    <a class="botao" href="https://drive.google.com/file/d/1C1Xbze-pe9SvmpM8bc3B5UlVWqGiUcYZ/view?usp=sharing" target="_blank">
+      Assistir ao vídeo 🎵
+    </a>
+  </div>
+
+</div>
+
+<script>
+  function proxima(tela) {
+    document.querySelectorAll(".container > div").forEach(div => div.classList.add("hidden"));
+    document.getElementById("tela" + tela).classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
