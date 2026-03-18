@@ -2,64 +2,105 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para você ❤️</title>
+
 <style>
 body {
-    font-family: Arial;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
     text-align: center;
-    background: #fff0f5;
-    padding: 40px;
+    color: #333;
 }
-button {
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #ff4d6d;
+}
+
+button, .botao {
     padding: 15px 25px;
     margin: 10px;
     font-size: 18px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     background: #ff4d6d;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
+
+button:hover, .botao:hover {
+    background: #e63e5c;
+    transform: scale(1.05);
+}
+
 .hidden {
     display: none;
+}
+
+.mensagem {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<div id="tela1">
-    <h1>Tenho algo pra você ❤️</h1>
-    <p>Mas só continua se estiver apaixonada por mim...</p>
-    <button onclick="proxima(2)">Estou pronta 💌</button>
-</div>
+<div class="container">
 
-<div id="tela2" class="hidden">
-    <h1>Escolha uma opção</h1>
-    <button onclick="proxima(3)">Ler mensagem 💖</button>
-    <button onclick="proxima(4)">Assistir ao vídeo 🎵</button>
-</div>
+    <!-- TELA 1 -->
+    <div id="tela1">
+        <h1>Tenho algo pra você ❤️</h1>
+        <p>Mas só continua se for com carinho...</p>
+        <button onclick="proxima(2)">Estou pronta 💌</button>
+    </div>
 
-<div id="tela3" class="hidden">
-    <h1>Minha mensagem</h1>
-    <p>
-    Desde quando nos beijamos pela primeira vez,<br>
-    tudo ficou mais bonito. E ao seu lado, tudo fica mais leve e mais verdadeiro.<br><br>
-    Te encontrar foi a minha sorte, ou nosso destino. ❤️
-    </p>
-    <button onclick="proxima(4)">Agora veja o vídeo 🎬</button>
-</div>
+    <!-- TELA 2 -->
+    <div id="tela2" class="hidden">
+        <h1>Escolha com o coração...</h1>
+        <button onclick="proxima(3)">Ler mensagem 💖</button>
+        <button onclick="proxima(4)">Ver surpresa 🎵</button>
+    </div>
 
-<div id="tela4" class="hidden">
-    <h1>Esse vídeo é pra você ❤️</h1>
-    <video width="300" controls>
-        <source src="video.mp4" type="video/mp4">
-    </video>
+    <!-- TELA 3 -->
+    <div id="tela3" class="hidden">
+        <h1>Minha mensagem pra você ❤️</h1>
+        <div class="mensagem">
+            Desde que você entrou na minha vida,<br><br>
+            tudo ficou mais bonito, mais leve e mais verdadeiro.<br><br>
+            Em um mundo tão grande,<br>
+            foi em você que eu encontrei o meu lugar.<br><br>
+            E, desde então,<br>
+            tudo faz mais sentido.<br><br>
+            Você é a melhor parte dos meus dias 💖
+        </div>
+        <button onclick="proxima(4)">Agora veja a surpresa 🎬</button>
+    </div>
+
+    <!-- TELA 4 -->
+    <div id="tela4" class="hidden">
+        <h1>Esse momento é pra você ❤️</h1>
+        <p>Clique abaixo...</p>
+
+        <!-- 🔥 COLE SEU LINK DO GOOGLE DRIVE AQUI -->
+        <a class="botao" href="COLE_AQUI_SEU_LINK_DO_GOOGLE_DRIVE" target="_blank">
+            Assistir ao vídeo 🎵
+        </a>
+
+    </div>
+
 </div>
 
 <script>
 function proxima(tela) {
-    document.querySelectorAll("div").forEach(div => div.classList.add("hidden"));
+    document.querySelectorAll(".container > div").forEach(div => div.classList.add("hidden"));
     document.getElementById("tela" + tela).classList.remove("hidden");
 }
 </script>
